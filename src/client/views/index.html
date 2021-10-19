@@ -19,8 +19,12 @@
         <main>
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
+                    <input id="name" type="text" name="input" value="" placeholder="Name">
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+                <form class="" onsubmit="return Client.textAnalyzer(event)">
+                    <input id="text" type="text" name="input" value="" placeholder="Text">
+                    <input type="submit" name="" value="submit" onclick="return Client.textAnalyzer(event)" onsubmit="return Client.textAnalyzer(event)">
                 </form>
             </section>
 
