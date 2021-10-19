@@ -8,6 +8,12 @@ module.exports = {
     mode: 'development',
     devtool: 'source-map',
     stats: 'verbose',
+    output: {
+      library: {
+        name: 'Client',
+        type: 'var'
+      }
+    },
     module: {
         rules: [
             {
