@@ -31,13 +31,6 @@ app.get('/test', function (req, res) {
 
 // Setting up the API POST request
 
-
-
-// const formdata = {
-//     "key": process.env.API_KEY,
-//     "lang": "en",
-// }
-
 app.post('/analyze', textToAnalyze)
   
 function textToAnalyze(req, res) {

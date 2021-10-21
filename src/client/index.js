@@ -1,6 +1,5 @@
-import { checkForName } from './js/nameChecker'
-import { handleSubmit } from './js/formHandler'
 import { textAnalyzer } from './js/textAnalyzer'
+import { urlChecker } from './js/urlChecker'
 
 import './styles/resets.scss'
 import './styles/base.scss'
@@ -9,7 +8,6 @@ import './styles/form.scss'
 import './styles/header.scss'
 
 export {
- checkForName,
- handleSubmit,
- textAnalyzer
+ textAnalyzer,
+ urlChecker
 }

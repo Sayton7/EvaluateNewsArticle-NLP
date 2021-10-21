@@ -3,7 +3,9 @@ export function textAnalyzer(e) {
 
     let url = document.getElementById('url').value
 
-    postText('/analyze', {url: url})
+    Client.urlChecker(url)
+    ? postText('/analyze', {url: url})
+    : null
 }
 
 const postText = async (url = '', data = {}) => {
