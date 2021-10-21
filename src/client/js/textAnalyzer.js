@@ -4,7 +4,7 @@ export function textAnalyzer(e) {
     let url = document.getElementById('url').value
 
     Client.urlChecker(url)
-    ? postText('/analyze', {url: url})
+    ? postText('/analyze', {url: url}).then(data => updateUI(data))
     : null
 }
 
@@ -25,4 +25,11 @@ const postText = async (url = '', data = {}) => {
     } catch (err) {
         console.log("error", err)
     }
+}
+
+const updateUI = (data) => {
+  document.getElementById('agreement').innerHTML = `Agreement: ${data.agreement}`
+  document.getElementById('confidence').innerHTML = `Confidence: ${data.confidence}`
+  document.getElementById('irony').innerHTML = `Irony: ${data.irony}`
+  document.getElementById('subjectivity').innerHTML = `Subjectivity: ${data.subjectivity}`
 }
