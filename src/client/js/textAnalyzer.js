@@ -4,7 +4,7 @@ export function textAnalyzer(e) {
     let url = document.getElementById('url').value
 
     Client.urlChecker(url)
-    ? postText('/analyze', {url: url}).then(data => updateUI(data))
+    ? postText('http://localhost:8081/analyze', {url: url}).then(data => updateUI(data))
     : null
 }
 
@@ -13,6 +13,7 @@ const postText = async (url = '', data = {}) => {
         method: 'POST',
         credentials: 'same-origin',
         headers: {
+            'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
