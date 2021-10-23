@@ -2,6 +2,19 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
+    .result {
+        font-weight: 700;
+        border: solid 1px;
+        padding: 40px;
+        max-width: 800px;
+        margin: 50px auto;
+
+        div {
+            font-weight: 500;
+            margin: 15px 0px;
+        }
+    } 
 }
 
 main {
